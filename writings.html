@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com/3.4.1"></script>
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .nav-title {
+          @apply text-[3rem] md:text-[3rem] 3xl:text-[6.5rem] font-bold;
+        }
+      }
+    </style>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            font: {
+              inter: ["Inter", "sans-serif"],
+            },
+            screens: {
+              "3xl": "1920px",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="font-inter">
+    <nav
+      class="fixed left-0 min-h-svh h-full bg-black text-white w-[30%] flex flex-col items-start gap-4 p-12 z-40"
+    >
+      <h2 class="text-[2rem] font-semibold">Rizal.</h2>
+      <h1 class="nav-title">Discover the Life and Legacy of José Rizal</h1>
+      <div
+        class="flex flex-col items-start justify-start mt-6 gap-4 text-[24px]"
+      >
+        <a href="./index.html" class="font-bold"> Introduction </a>
+        <a
+          href="./life-story.html"
+          class="text-gray-300 hover:text-white hover:font-bold ease-in-out transition-all"
+        >
+          Life Story
+        </a>
+        <a
+          href="#"
+          class="text-gray-300 hover:text-white hover:font-bold ease-in-out transition-all"
+        >
+          Writings
+        </a>
+        <a
+          href="#"
+          class="text-gray-300 hover:text-white hover:font-bold ease-in-out transition-all"
+        >
+          Legacy
+        </a>
+        <a
+          href="#"
+          class="text-gray-300 hover:text-white hover:font-bold ease-in-out transition-all"
+        >
+          Books
+        </a>
+      </div>
+    </nav>
+
+    <div
+      class="mix-blend-difference p-16 rounded-full bg-white z-30 fixed ease-linear transition-all duration-100 text-center"
+      id="cursor"
+    >
+      <div class="mix-blend-difference"></div>
+    </div>
+
+    <img
+      src="./images/rizal.png"
+      alt="Rizal"
+      width="350px"
+      class="fixed left-[20%] 3xl:left-[23%] bottom-0 z-40"
+      id="rizal"
+    />
+
+    <main
+      id="smooth-wrapper"
+      class="ml-[30%] !w-[70%] p-8 px-32 mix-blend-difference bg-white"
+    >
+      <section
+        id="smooth-content"
+        class="flex flex-col items-center justify-start gap-12 pb-32"
+      >
+        <h1 class="text-[6rem] font-bold self-start">Introduction</h1>
+
+        <p class="text-[4rem]">
+          Dr. José Rizal Mercado y Alonso Realonda, or simply José Rizal, is
+          revered as the national hero of the Philippines.
+        </p>
+        <p class="text-[4rem]">
+          He was a multifaceted intellectual who left his mark on Philippine
+          history through his writings, activism, and even his artistic talents.
+        </p>
+        <p class="text-[4rem]">
+          As a physician, writer, artist, and scholar, he possessed a remarkable
+          array of talents. Inspiring Filipino nationalism, Rizal's life and
+          writings set the stage for the independence struggle.
+        </p>
+        <p class="text-[4rem]">
+          This website dives into his extraordinary life story, examining his
+          childhood, schooling, travels, and influential literary works that
+          still motivate Filipinos today.
+        </p>
+
+        <div class="bg-black rounded-full text-center p-16 underline relative">
+          <a
+            href="#"
+            class="text-white font-bold text-[24px] ease-in-out transition-all absolute top-10 left-8"
+            >NEXT</a
+          >
+        </div>
+      </section>
+    </main>
+
+    <script src="./script/gsap.min.js"></script>
+    <script src="./script/ScrollTrigger.min.js"></script>
+    <script src="./script/Observer.min.js"></script>
+    <script src="./script/ScrollToPlugin.min.js"></script>
+    <script src="./script/ScrollSmoother.min.js"></script>
+    <script src="./script/index.js"></script>
+  </body>
+</html>

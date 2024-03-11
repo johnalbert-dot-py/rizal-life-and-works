@@ -9,6 +9,13 @@
       rel="stylesheet"
     />
     <script src="https://cdn.tailwindcss.com/3.4.1"></script>
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .nav-title {
+          @apply text-[3rem] md:text-[3rem] 3xl:text-[6.5rem] font-bold;
+        }
+      }
+    </style>
 
     <script>
       tailwind.config = {
@@ -16,6 +23,9 @@
           extend: {
             font: {
               inter: ["Inter", "sans-serif"],
+            },
+            screens: {
+              "3xl": "1920px",
             },
           },
         },
@@ -27,9 +37,7 @@
       class="fixed left-0 min-h-svh h-full bg-black text-white w-[30%] flex flex-col items-start gap-4 p-12 z-40"
     >
       <h2 class="text-[2rem] font-semibold">Rizal.</h2>
-      <h1 class="text-3rem md:text-4rem xl:text-[6.5rem] font-bold">
-        Discover the Life and Legacy of José Rizal
-      </h1>
+      <h1 class="nav-title">Discover the Life and Legacy of José Rizal</h1>
       <div
         class="flex flex-col items-start justify-start mt-6 gap-4 text-[24px]"
       >
@@ -41,19 +49,19 @@
           Life Story
         </a>
         <a
-          href="#"
+          href="./writings.html"
           class="text-gray-300 hover:text-white hover:font-bold ease-in-out transition-all"
         >
           Writings
         </a>
         <a
-          href="#"
+          href="./legacy.html"
           class="text-gray-300 hover:text-white hover:font-bold ease-in-out transition-all"
         >
           Legacy
         </a>
         <a
-          href="#"
+          href="./books.html"
           class="text-gray-300 hover:text-white hover:font-bold ease-in-out transition-all"
         >
           Books
@@ -72,7 +80,7 @@
       src="./images/rizal.png"
       alt="Rizal"
       width="350px"
-      class="fixed left-[23%] bottom-0 z-40"
+      class="fixed left-[20%] 3xl:left-[23%] bottom-0 z-40"
       id="rizal"
     />
 
@@ -113,11 +121,6 @@
           >
         </div>
       </section>
-      <section id="life-story" class="hidden"></section>
-      <section id="life-story-travels" class="hidden"></section>
-      <section id="writings" class="hidden"></section>
-      <section id="legacy" class="hidden"></section>
-      <section id="books" class="hidden"></section>
     </main>
 
     <script src="./script/gsap.min.js"></script>

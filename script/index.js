@@ -8,9 +8,9 @@ window.addEventListener("mousemove", (e) => {
   const mouseX = e.clientX;
 
   // add delay on follow cursor
-  document.querySelector("#cursor").style.transform = `translate(${mouseX}px, ${
-    mouseY / 1
-  }px)`;
+  document.querySelector("#cursor").style.transform = `translate3d(${
+    mouseX - 60
+  }px, ${mouseY - 55}px, 0)`;
 });
 
 ScrollSmoother.create({
@@ -74,18 +74,6 @@ gsap.from(".count-4", {
   ease: "power1.inOut",
 });
 
-gsap.from("#side-desc", {
-  // scrollTrigger: {
-  //   trigger: "#side-desc",
-  //   start: "top center",
-  //   end: "bottom center",
-  //   scrub: 1,
-  // },
-  y: 300,
-  duration: 0.5,
-  ease: "power1.inOut",
-});
-
 // categories
 gsap.from(".childhood-category", {
   scrollTrigger: {
@@ -125,15 +113,104 @@ gsap.from("#rizal", {
   duration: 0.5,
 });
 
-// cursor
-gsap.to("#cursor", {
+// travels-content
+gsap.from(".t-p-1", {
   scrollTrigger: {
-    trigger: "#rizal",
-    start: "top top",
-    end: "bottom end",
+    trigger: ".travels",
+    start: "top bottom",
+    end: "bottom bottom",
+    toggleActions: "restart none reverse none",
+  },
+  y: 200,
+  duration: 0.5,
+  ease: "power1.inOut",
+});
+
+gsap.from(".t-p-3", {
+  scrollTrigger: {
+    trigger: ".travels",
+    start: "top center",
+    end: "bottom bottom",
+    toggleActions: "restart none reverse none",
+  },
+  y: 400,
+  duration: 0.5,
+  ease: "power1.inOut",
+});
+
+gsap.from(".t-p-2", {
+  scrollTrigger: {
+    trigger: ".travels",
+    start: "top bottom",
+    end: "bottom bottom",
+    toggleActions: "restart none reverse none",
+  },
+  y: 200,
+  duration: 0.5,
+  ease: "power1.inOut",
+  delay: 0.2,
+});
+
+gsap.from(".t-p-4", {
+  scrollTrigger: {
+    trigger: ".travels",
+    start: "top center",
+    end: "bottom bottom",
+    toggleActions: "restart none reverse none",
+  },
+  y: 400,
+  duration: 0.5,
+  ease: "power1.inOut",
+  delay: 0.2,
+});
+
+// side desc or legend
+gsap.to(".legend", {
+  scrollTrigger: {
+    trigger: ".education",
+    start: "bottom bottom",
+    end: "bottom bottom",
+    toggleActions: "restart none reverse none",
     scrub: 1,
   },
-  border: "2px solid #fff",
-  backgroundColor: "rgba(0,0,0,0)",
-  mixBlendMode: "none",
+  y: -300,
+  duration: 0.5,
+  ease: "power1.inOut",
+  text: {
+    value: "TRAVELS",
+    ease: "none",
+  },
 });
+
+gsap.from(".legend-2", {
+  scrollTrigger: {
+    trigger: ".education",
+    start: "bottom center",
+    end: "bottom bottom",
+    toggleActions: "restart none reverse none",
+    // scrub: 1,
+  },
+  y: 400,
+  // duration: 0.5,
+  delay: 0.2,
+  ease: "steps(12)",
+});
+
+gsap.from("#side-desc", {
+  y: 300,
+  duration: 0.5,
+  ease: "power1.inOut",
+});
+
+// cursor
+// gsap.to("#cursor", {
+//   scrollTrigger: {
+//     trigger: "#rizal",
+//     start: "top top",
+//     end: "bottom end",
+//     scrub: 1,
+//   },
+//   border: "2px solid #fff",
+//   backgroundColor: "rgba(0,0,0,0)",
+//   mixBlendMode: "none",
+// });
