@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com/3.4.1"></script>
+
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .nav-title {
+          @apply text-[3rem] md:text-[3rem] 3xl:text-[6.5rem] font-bold;
+        }
+      }
+    </style>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            font: {
+              inter: ["Inter", "sans-serif"],
+            },
+            colors: {
+              black: "#131313",
+              white: "#fff",
+            },
+            screens: {
+              "2xl": "1536px",
+              "3xl": "1920px",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="font-inter">
+    <nav
+      class="fixed left-0 min-h-svh h-full bg-black text-white w-[30%] flex flex-col items-start gap-4 p-12 z-40 border-r border-white"
+    >
+      <h2 class="text-[2rem] font-semibold">Rizal.</h2>
+      <h1 class="nav-title">Discover the Life and Legacy of José Rizal</h1>
+      <div
+        class="flex flex-col items-start justify-start mt-6 gap-4 text-[24px]"
+      >
+        <a
+          href="./index.html"
+          class="text-gray-300 hover:text-white hover:font-bold ease-in-out transition-all"
+        >
+          Introduction
+        </a>
+        <a href="#" class="font-bold"> Life Story </a>
+        <a
+          href="#"
+          class="text-gray-300 hover:text-white hover:font-bold ease-in-out transition-all"
+        >
+          Writings
+        </a>
+        <a
+          href="#"
+          class="text-gray-300 hover:text-white hover:font-bold ease-in-out transition-all"
+        >
+          Legacy
+        </a>
+        <a
+          href="#"
+          class="text-gray-300 hover:text-white hover:font-bold ease-in-out transition-all"
+        >
+          Books
+        </a>
+      </div>
+    </nav>
+
+    <div
+      class="mix-blend-difference p-16 rounded-full bg-white z-30 fixed ease-linear transition-all duration-100 text-center"
+      id="cursor"
+    >
+      <div class="mix-blend-difference"></div>
+    </div>
+
+    <main
+      id="smooth-wrapper"
+      class="ml-[30%] !w-[70%] mix-blend-difference bg-white"
+    >
+      <section id="smooth-content">
+        <article
+          class="w-full bg-black h-full min-h-svh text-white flex flex-col items-start p-16 px-32 relative childhood"
+        >
+          <h2
+            class="text-[3rem] -rotate-90 text-opacity-10 self-start absolute mt-12 -left-[4rem] childhood-category"
+          >
+            Childhood
+          </h2>
+          <div
+            class="text-[2rem] font-bold bg-white p-1 px-4 text-black self-start absolute mt-12 -top-12 right-0 rizal-sub"
+          >
+            José Rizal
+          </div>
+          <h1
+            class="text-[6rem] font-bold self-center mb-16 w-[30%] text-end count-1"
+          >
+            01
+          </h1>
+
+          <img
+            src="./images/child-rizal.png"
+            alt="Child Rizal"
+            class="self-center w-[30%]"
+          />
+
+          <p class="text-lg self-center w-[30%] mt-4">
+            Jose Rizal was born on June 19, 1861, in Calamba, Laguna,
+            Philippines. A young boy with a thirst for knowledge, he displayed
+            exceptional intellectual abilities from a young age. He was a
+            multi-talented prodigy, excelling in writing, poetry, sketching, and
+            sculpting.
+          </p>
+        </article>
+        <article
+          class="w-full bg-whie h-full min-h-svh text-black border-b border-black flex flex-col items-start p-16 px-32 relative family"
+        >
+          <h2
+            class="text-[3rem] -rotate-90 text-gray-300 self-start absolute mt-12 -left-[2rem] family-category"
+          >
+            Family
+          </h2>
+          <div
+            class="text-[2rem] font-bold bg-black p-1 px-4 text-white self-start absolute mt-12 -top-12 right-0 family-sub"
+          >
+            Family Influence
+          </div>
+          <h1
+            class="text-[6rem] font-bold self-center mb-16 w-[30%] text-end count-2"
+          >
+            02
+          </h1>
+
+          <img
+            src="./images/rizal-family.png"
+            alt="Child Rizal"
+            class="self-center w-[30%]"
+          />
+
+          <p class="text-lg self-center w-[30%] mt-4">
+            Influenced by his loving parents, Francisco Mercado (father) and
+            Teodora Alonso (mother), Rizal developed a strong sense of justice
+            and a deep appreciation for learning. His mother, Teodora,
+            particularly fostered his intellectual curiosity and nurtured his
+            artistic talents. A pivotal moment in his young life occurred in
+            1872, when his mother was falsely imprisoned on accusations of
+            poisoning. This experience fueled his growing resentment towards
+            injustice.
+          </p>
+        </article>
+        <article
+          class="w-full bg-whie h-full min-h-svh text-black border-b border-black flex flex-col items-start p-16 px-32 relative romance"
+        >
+          <h2
+            class="text-[3rem] -rotate-90 text-gray-300 self-start absolute mt-[10rem] -left-[9rem]"
+          >
+            Early Romanticism
+          </h2>
+          <div
+            class="text-[2rem] font-bold bg-black p-1 px-4 text-white self-start absolute mt-12 -top-12 right-0 love-sub"
+          >
+            First Love
+          </div>
+          <h1
+            class="text-[6rem] font-bold self-center mb-16 w-[30%] text-end count-3"
+          >
+            03
+          </h1>
+
+          <img
+            src="./images/segunda-katigbak.png"
+            alt="Child Rizal"
+            class="self-center w-[30%]"
+          />
+
+          <p class="text-lg self-center w-[30%] mt-4">
+            While studying at Ateneo de Manila, Rizal experienced his first love
+            with Segunda Katigbak, a childhood friend. However, due to societal
+            pressures and his burgeoning ambitions to study abroad, the
+            relationship remained unfulfilled. He poured his emotions into poems
+            and letters dedicated to Segunda, showcasing his early romantic
+            sensibilities.
+          </p>
+        </article>
+        <article
+          class="w-full bg-whie h-full min-h-svh text-black border-b border-black flex flex-col items-start p-16 px-32 relative education"
+        >
+          <h2
+            class="text-[3rem] -rotate-90 text-gray-300 self-start absolute mt-[10rem] -left-[7rem]"
+          >
+            Early Education
+          </h2>
+          <div
+            class="text-[2rem] font-bold bg-black p-1 px-4 text-white self-start absolute mt-12 -top-12 right-0 educational-sub"
+          >
+            Education
+          </div>
+          <h1
+            class="text-[6rem] font-bold self-center mb-16 w-[30%] text-end count-4"
+          >
+            04
+          </h1>
+
+          <img
+            src="./images/maestro-cruz.png"
+            alt="Child Rizal"
+            class="self-center w-[30%]"
+          />
+
+          <p class="text-lg self-center w-[30%] mt-4">
+            Rizal's academic journey began in his hometown under the mentorship
+            of Maestro Justiniano Cruz. He later excelled at Ateneo de Manila
+            (1872-1882), graduating at the top of his class with numerous awards
+            in various subjects.
+          </p>
+        </article>
+      </section>
+      <section id="life-story-travels" class="hidden"></section>
+      <section id="writings" class="hidden"></section>
+      <section id="legacy" class="hidden"></section>
+      <section id="books" class="hidden"></section>
+    </main>
+
+    <div
+      class="fixed left-[29%] z-50 text-white w-auto h-auto p-2 py-5 text-2xl border border-white bottom-0 bg-black"
+      style="writing-mode: vertical-rl; text-orientation: upright"
+      id="side-desc"
+    >
+      EARLY LIFE
+    </div>
+
+    <script src="./script/gsap.min.js"></script>
+    <script src="./script/ScrollTrigger.min.js"></script>
+    <script src="./script/Observer.min.js"></script>
+    <script src="./script/ScrollToPlugin.min.js"></script>
+    <script src="./script/ScrollSmoother.min.js"></script>
+    <script src="./script/index.js"></script>
+  </body>
+</html>
