@@ -7,7 +7,7 @@ window.addEventListener("mousemove", (e) => {
   const mouseY = e.clientY;
   const mouseX = e.clientX;
 
-  if (!window.location.pathname.indexOf("books.html")) {
+  if (window.location.pathname.indexOf("books.html") === -1) {
     document.querySelector("#cursor").style.transform = `translate3d(${
       mouseX - 60
     }px, ${mouseY - 55}px, 0)`;
