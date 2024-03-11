@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com/3.4.1"></script>
+
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .nav-title {
+          @apply text-[3rem] md:text-[3rem] 3xl:text-[6.5rem] font-bold;
+        }
+      }
+
+      a:hover {
+        text-shadow: 0px 0px 1px #000;
+      }
+    </style>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            font: {
+              inter: ["Inter", "sans-serif"],
+            },
+            colors: {
+              black: "#131313",
+              white: "#fff",
+            },
+            screens: {
+              "2xl": "1536px",
+              "3xl": "1920px",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="font-inter">
+    <nav
+      class="fixed flex flex-row px-9 mt-2 justify-start items-baseline text-xl gap-8 inline-nav"
+    >
+      <a
+        href="./index.html"
+        class="text-black hover:underline ease-in-out transition-all"
+      >
+        Introduction
+      </a>
+      <a
+        href="./life-story.html"
+        class="text-black hover:underline ease-in-out transition-all"
+      >
+        Life Story
+      </a>
+      <a
+        href="./writings.html"
+        class="text-black hover:underline ease-in-out transition-all"
+      >
+        Writings
+      </a>
+      <a
+        href="./legacy.html"
+        class="text-black hover:underline ease-in-out transition-all"
+      >
+        Legacy
+      </a>
+      <a href="./books.html" class="font-bold text-5xl underline"> Books </a>
+    </nav>
+
+    <main id="smooth-wrapper" class="bg-white !mt-[5rem] !pb-20">
+      <section id="smooth-content" class="p-8 flex flex-col pb-[12rem] gap-8">
+        <article
+          class="flex flex-row justify-between gap-8 border border-black p-6 h-full"
+        >
+          <div class="flex flex-col items-start justify-end gap-4 h-full">
+            <h1 class="text-4xl font-bold">Rizal Without the Overcoat</h1>
+            <p class="text-xl">
+              This book takes a fresh look at Rizal's life and works, offering a
+              more nuanced understanding of the national hero.
+            </p>
+            <p class="mt-8">by Ambeth R. Ocampo</p>
+          </div>
+
+          <div class="flex flex-row gap-4">
+            <img src="./images/book-1.png" alt="Rizal Without the Overcoat " />
+            <img
+              src="./images/book-1-1.png"
+              alt="Rizal Without the Overcoat - Alternate Cover "
+            />
+            <img
+              src="./images/book-1-2.png"
+              alt="Ambeth R. Ocampo the author of Rizal Without the Overcoat "
+            />
+          </div>
+        </article>
+
+        <article
+          class="flex flex-row justify-between gap-8 border border-black p-6 h-full"
+        >
+          <div class="flex flex-col items-start justify-end gap-4 h-full">
+            <h1 class="text-4xl font-bold">
+              The first Filipino: A biography of José Rizal
+            </h1>
+            <p class="text-xl">
+              This comprehensive biography provides a detailed account of
+              Rizal's life, from his childhood to his execution.
+            </p>
+            <p class="mt-8">by Leon Guerrero</p>
+          </div>
+
+          <div class="flex flex-row gap-4">
+            <img src="./images/book-2.png" alt="Rizal Without the Overcoat " />
+            <img
+              src="./images/book-2-1.png"
+              alt="Rizal Without the Overcoat - Alternate Cover "
+            />
+            <img
+              src="./images/book-2-2.png"
+              alt="Ambeth R. Ocampo the author of Rizal Without the Overcoat "
+            />
+          </div>
+        </article>
+
+        <article
+          class="flex flex-row justify-between gap-8 border border-black p-6 h-full"
+        >
+          <div class="flex flex-col items-start justify-end gap-4 h-full">
+            <h1 class="text-4xl font-bold">
+              José Rizal: Life, Works, and Writings of a Genius, Writer,
+              Scientist, and National Hero
+            </h1>
+            <p class="text-xl max-w-[60rem]">
+              A classic biography of the PHilippine's National Hero, this book
+              revises the previous edition written for the Jose Rizal Centennial
+              with fresh insights, new data, and new appedices. One of the
+              best-selling books on Rizal, this volume contains new inforamation
+              about the conditions in Rizal's times, the attempt on his life in
+              Dapitan, his prophetic views about the Philippines, and other
+              data. In particular, it correts the impression that Rizal had been
+              a "colonial-made hero," and affirms that he was a hero for all
+              seasons and for all people -- Filipinos, Spaniards, and Americans,
+              Germans, Austrians, Malays, Indonesians, etc.
+            </p>
+            <p class="mt-8">by Gregorio F. Zaide & Sonia M. Zaide</p>
+          </div>
+
+          <div class="flex flex-row gap-4">
+            <img
+              src="./images/book-3.png"
+              width="320"
+              class="object-contain"
+              alt="Rizal Without the Overcoat "
+            />
+            <img
+              src="./images/book-3-1.png"
+              height="100"
+              alt="Rizal Without the Overcoat - Alternate Cover "
+            />
+            <img
+              src="./images/book-3-2.png"
+              height="100"
+              alt="Ambeth R. Ocampo the author of Rizal Without the Overcoat "
+            />
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <script src="./script/gsap.min.js"></script>
+    <script src="./script/ScrollTrigger.min.js"></script>
+    <script src="./script/Observer.min.js"></script>
+    <script src="./script/ScrollToPlugin.min.js"></script>
+    <script src="./script/ScrollSmoother.min.js"></script>
+    <script src="./script/index.js"></script>
+  </body>
+</html>

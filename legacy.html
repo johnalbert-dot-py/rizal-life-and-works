@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com/3.4.1"></script>
+
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .nav-title {
+          @apply text-[3rem] md:text-[3rem] 3xl:text-[6.5rem] font-bold;
+        }
+      }
+
+      body {
+        @apply cursor-none;
+      }
+
+      nav {
+        @apply !cursor-default;
+      }
+    </style>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            font: {
+              inter: ["Inter", "sans-serif"],
+            },
+            colors: {
+              black: "#131313",
+              white: "#fff",
+            },
+            screens: {
+              "2xl": "1536px",
+              "3xl": "1920px",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="font-inter">
+    <nav
+      class="fixed left-0 min-h-svh h-full bg-black text-white w-[30%] flex flex-col items-start gap-4 p-12 z-40 border-r border-white"
+    >
+      <h2 class="text-[2rem] font-semibold">Rizal.</h2>
+      <h1 class="nav-title">A Legacy That Endures.</h1>
+      <div
+        class="flex flex-col items-start justify-start mt-6 gap-4 text-[24px]"
+      >
+        <a
+          href="./index.html"
+          class="text-gray-300 hover:text-white hover:font-bold ease-in-out transition-all"
+        >
+          Introduction
+        </a>
+        <a
+          href="./life-story.html"
+          class="text-gray-300 hover:text-white hover:font-bold ease-in-out transition-all"
+        >
+          Life Story
+        </a>
+        <a
+          href="./writings.html"
+          class="text-gray-300 hover:text-white hover:font-bold ease-in-out transition-all"
+        >
+          Writings
+        </a>
+        <a href="./legacy.html" class="font-bold"> Legacy </a>
+        <a
+          href="./books.html"
+          class="text-gray-300 hover:text-white hover:font-bold ease-in-out transition-all"
+        >
+          Books
+        </a>
+      </div>
+    </nav>
+
+    <div
+      class="mix-blend-difference p-16 rounded-full bg-white z-30 fixed ease-linear transition-all duration-100 text-center"
+      id="cursor"
+    >
+      <div class="mix-blend-difference"></div>
+    </div>
+
+    <main
+      id="smooth-wrapper"
+      class="ml-[30%] !w-[70%] mix-blend-difference bg-white"
+    >
+      <section id="smooth-content" class="">
+        <article
+          class="w-full bg-black h-full min-h-svh text-white flex flex-col items-start p-16 px-32 relative childhood"
+        >
+          <h1 class="text-7xl font-bold">The Spark of Revolution</h1>
+          <h2 class="text-5xl font-semibold mt-5">1892-1896</h2>
+          <p class="mt-4 text-xl">
+            Upon returning to the Philippines in 1892, Rizal founded the
+            peaceful reform society La Liga Filipina. However, Spanish
+            authorities, fearing his influence, exiled him to Dapitan in
+            Mindanao (1892-1896).
+          </p>
+
+          <div class="flex flex-row items-start align-middle mt-8 gap-4">
+            <img
+              src="./images/la-liga-1.png"
+              alt="La Liga Members"
+              width="420px"
+              class=""
+            />
+            <img
+              src="./images/la-liga-2.png"
+              alt="La Liga Members Picture"
+              width="420px"
+              class=""
+            />
+          </div>
+
+          <p class="mt-8 text-xl">
+            Despite this, Rizal's writings continued to inspire Filipinos,
+            ultimately contributing to the outbreak of the Philippine Revolution
+            in 1896. In Dapitan, he fell in love with Josephine Bracken, an
+            Irish woman with whom he planned to build a life. However, their
+            plans were tragically cut short.
+          </p>
+          <div class="flex flex-row items-baseline mt-8 gap-4">
+            <img
+              src="./images/dapitan-1.png"
+              alt="La Liga Members"
+              width="320px"
+              height="269px"
+              class="border border-white"
+            />
+            <img
+              src="./images/josephine.png"
+              alt="La Liga Members Picture"
+              width="420px"
+              height="269px"
+              class="border border-white"
+            />
+          </div>
+        </article>
+        <article
+          class="w-full bg-white h-full min-h-svh text-black flex flex-col items-start p-16 px-32 relative childhood"
+        >
+          <h1 class="text-7xl font-bold">A Symbol of Hope</h1>
+          <h2 class="text-5xl font-semibold mt-5">December 30, 1896</h2>
+          <p class="mt-4 text-2xl">
+            Falsely accused of rebellion, Rizal was executed by firing squad on
+            December 30, 1896, in Manila. His death became a rallying cry for
+            the revolutionaries, further fueling the fight for independence.
+          </p>
+
+          <div class="flex flex-row items-start align-middle mt-8 gap-4">
+            <img
+              src="./images/bagumbayan.png"
+              alt="Rizal's execution on Bagumbayan / Luneta"
+              width="620px"
+              class="border border-black"
+            />
+            <img
+              src="./images/kkk.png"
+              alt="KKK Art"
+              width="570px"
+              class="border border-black"
+            />
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <script src="./script/gsap.min.js"></script>
+    <script src="./script/ScrollTrigger.min.js"></script>
+    <script src="./script/Observer.min.js"></script>
+    <script src="./script/ScrollToPlugin.min.js"></script>
+    <script src="./script/ScrollSmoother.min.js"></script>
+    <script src="./script/index.js"></script>
+  </body>
+</html>

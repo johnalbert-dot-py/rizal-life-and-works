@@ -7,10 +7,11 @@ window.addEventListener("mousemove", (e) => {
   const mouseY = e.clientY;
   const mouseX = e.clientX;
 
-  // add delay on follow cursor
-  document.querySelector("#cursor").style.transform = `translate3d(${
-    mouseX - 60
-  }px, ${mouseY - 55}px, 0)`;
+  if (!window.location.pathname.indexOf("books.html")) {
+    document.querySelector("#cursor").style.transform = `translate3d(${
+      mouseX - 60
+    }px, ${mouseY - 55}px, 0)`;
+  }
 });
 
 ScrollSmoother.create({
@@ -190,27 +191,14 @@ gsap.from(".legend-2", {
     toggleActions: "restart none reverse none",
     // scrub: 1,
   },
-  y: 400,
+  y: 900,
   // duration: 0.5,
   delay: 0.2,
-  ease: "steps(12)",
+  ease: "power1.inOut",
 });
 
 gsap.from("#side-desc", {
   y: 300,
   duration: 0.5,
-  ease: "power1.inOut",
+  ease: "power3.inOut",
 });
-
-// cursor
-// gsap.to("#cursor", {
-//   scrollTrigger: {
-//     trigger: "#rizal",
-//     start: "top top",
-//     end: "bottom end",
-//     scrub: 1,
-//   },
-//   border: "2px solid #fff",
-//   backgroundColor: "rgba(0,0,0,0)",
-//   mixBlendMode: "none",
-// });
